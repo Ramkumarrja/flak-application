@@ -18,7 +18,7 @@ class Docx2PdfConverter:
         - bool: True if the conversion is successful, False otherwise.
         """
         try:
-            subprocess.run(["libreoffice", "--headless", "--convert-to", "pdf", self.docx_path, "--outdir", "output_folder"])
+            subprocess.run(["libreoffice", "--headless", "--convert-to", "pdf", self.word_file, "--outdir", "uploads"])
             return True
         except subprocess.CalledProcessError as e:
             print(f"Error during conversion: {e}")
