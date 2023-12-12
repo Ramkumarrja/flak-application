@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request,send_file
 from word2pdfconverter import Docx2PdfConverter
-from pdf_utils import PdfSplitter,PdfMerger
 
 app = Flask(__name__)
 
