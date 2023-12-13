@@ -11,7 +11,7 @@ def index():
 def convert_file():
     file = request.files['file']
     file.save('input.docx')
-    word_output = 'uploads/output.pdf'
+    word_output = 'uploads/input.pdf'
     converter = Docx2PdfConverter("input.docx",word_output)
     converter.convert_docx_to_pdf_linux()
     return send_file(
